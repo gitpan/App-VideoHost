@@ -1,0 +1,21 @@
+%layout 'default';
+
+<p>Videos sorted in reverse chronological order</p>
+
+<div class="row">
+
+% my $count = 0;
+% my @videos = videos->list;
+% while (my $video = shift @videos) {
+  % $count++;
+  <div class="col-lg-6">
+    %= include 'include/video', video => $video
+    <h4><%= $video->title %>  - <%= $video->metadata('date') %></h4>
+    <hr>
+  </div>
+  % if  ($count % 2 == 0 && @videos) {
+</div>
+<div class="row">
+  % }
+% }
+</div>

@@ -1,0 +1,20 @@
+0.143303  2014-11-26 18:42:24 Australia/Adelaide (TRIAL RELEASE)
+
+    * Correct dist name in dist.ini
+
+0.143302  2014-11-26 17:37:49 Australia/Adelaide
+
+    * Add meta resources
+
+0.143301  2014-11-26 17:23:52 Australia/Adelaide
+
+    * Fix dist.ini 
+    * Remove superfluous Mojolicious skeleton index.html
+
+0.143300  2014-11-26 16:57:07 Australia/Adelaide (TRIAL RELEASE)
+
+    * Get dzil release off the ground
+
+0.1       2014-11-26 16:47:14 Australia/Adelaide (TRIAL RELEASE)
+
+    * Initial version

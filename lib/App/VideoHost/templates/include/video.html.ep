@@ -1,0 +1,15 @@
+%# $video 
+
+<video id="<%= $video->id %>" class="video-js vjs-default-skin"
+  controls preload="auto" width="480" height="264"
+% if ($video->has_poster) {
+  poster="<%= url_for('poster', short_name => $video->short_name) %>"
+% }
+  data-setup='{"example_option":true}'>
+ <source src="<%= url_for('video', short_name => $video->short_name) %>" type='video/mp4' />
+
+% if ($video->has_tracks) {
+ <track kind="captions" src="<%= url_for('tracks', short_name => $video->short_name) %>" srclang="en" label="English" default>
+% }
+
+</video>

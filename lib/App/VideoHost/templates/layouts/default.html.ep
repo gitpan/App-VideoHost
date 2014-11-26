@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head><title><%= title %></title>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="//vjs.zencdn.net/4.10/video-js.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/4.10/video.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="page-header">
+        <h1><%= config->{site_name} %></h1>
+        <p class="lead"><%= config->{site_description} %></p>
+      </div>
+
+<%= content %>
+  </body>
+</html>
