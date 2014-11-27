@@ -1,7 +1,9 @@
 package App::VideoHost::Video;
 {
-  $App::VideoHost::Video::VERSION = '0.143303'; # TRIAL
+  $App::VideoHost::Video::VERSION = '0.143310'; # TRIAL
 }
+
+# ABSTRACT: Encapsulate a single video
 
 use Moose;
 use File::Spec;
@@ -9,8 +11,12 @@ use Carp qw/croak confess/;
 
 has 'directory' => (is => 'rw');
 
+
 sub check {
   my $self = shift;
+
+  # XXX there is room for a lot of optimisation here!
+
   die "no directory set\n"         unless $self->directory;
   die "directory does not exist\n" unless -d $self->directory;
 
@@ -38,6 +44,7 @@ sub title { my $title = shift->metadata('title'); croak "no title" unless $title
 sub file  { return shift->path_to('video') }
 sub poster { return shift->path_to('poster') }
 sub tracks { return shift->path_to('tracks') }
+
 
 sub metadata {
   my $self = shift;
@@ -76,3 +83,48 @@ sub path_to {
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+App::VideoHost::Video - Encapsulate a single video
+
+=head1 VERSION
+
+version 0.143310
+
+=head1 SYNOPSIS
+
+    # /foo/bar/baz contains video.mp4 and metadata.txt
+    my $video = App::VideoHost::Video->new(directory => '/foo/bar/baz');
+    $video->check;
+
+=head1 METHODS
+
+=head2 check
+
+Check this video for correct metadata.
+
+Throws an exception if there is a problem with the video or it's related files.
+
+=head2 metadata
+
+Return the value for a given key for this L<App::VideoHost::Video> object.
+
+=head1 AUTHOR
+
+Justin Hawkins <justin@eatmorecode.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2014 by Justin Hawkins.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut

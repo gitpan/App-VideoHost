@@ -18,5 +18,7 @@ lib/App/VideoHost/templates/layouts/default.html.ep
 lib/App/VideoHost/templates/root/index.html.ep
 script/video_host
 t/basic.t
+t/release-pod-syntax.t
 t/testdata/video_1/metadata.txt
 t/testdata/video_1/video.mp4
+t/video.t

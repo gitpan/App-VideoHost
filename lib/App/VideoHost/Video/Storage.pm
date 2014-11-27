@@ -1,7 +1,9 @@
 package App::VideoHost::Video::Storage;
 {
-  $App::VideoHost::Video::Storage::VERSION = '0.143303'; # TRIAL
+  $App::VideoHost::Video::Storage::VERSION = '0.143310'; # TRIAL
 }
+
+# ABSTRACT: Manage a list of L<App::VideoHost::Video>s
 
 use Moose;
 use File::Spec;
@@ -66,3 +68,30 @@ sub find_by_short_name {
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+App::VideoHost::Video::Storage - Manage a list of L<App::VideoHost::Video>s
+
+=head1 VERSION
+
+version 0.143310
+
+=head1 AUTHOR
+
+Justin Hawkins <justin@eatmorecode.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2014 by Justin Hawkins.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut

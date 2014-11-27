@@ -1,5 +1,5 @@
 ---
-abstract: 'filesystem based personal video hosting'
+abstract: 'Filesystem based personal video hosting'
 author:
   - 'Justin Hawkins <justin@eatmorecode.com>'
 build_requires: {}
@@ -16,8 +16,9 @@ requires:
   Carp: 0
   Mojolicious: 4.63
   Moose: 2.1005
+  Test::Exception: 0
 resources:
   bugtracker: https://github.com/EatMoreCode/video_host/issues
   homepage: https://github.com/EatMoreCode/video_host
   repository: https://github.com/EatMoreCode/video_host
-version: 0.143303
+version: 0.143310

@@ -1,6 +1,6 @@
 package App::VideoHost;
 {
-  $App::VideoHost::VERSION = '0.143303'; # TRIAL
+  $App::VideoHost::VERSION = '0.143310'; # TRIAL
 }
 
 use Mojo::Base 'Mojolicious';
@@ -9,11 +9,8 @@ use App::VideoHost::Video::Storage;
 use File::Basename 'dirname';
 use File::Spec::Functions 'catdir';
 
-=head1 NAME
+# ABSTRACT: Filesystem based personal video hosting
 
-App::VideoHost - filesystem based personal video hosting
-
-=cut
 
 # This method will run once at server start
 sub startup {
@@ -59,3 +56,39 @@ sub startup {
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+App::VideoHost - Filesystem based personal video hosting
+
+=head1 VERSION
+
+version 0.143310
+
+=head1 SYNOPSIS
+
+Just drop videos and text files containing the metadata into a directory of
+your choice, then:
+
+     cp lib/VideoHost/video_host.conf $SOMEDIR/video_host.conf
+     edit $SOMEDIR/video_host.conf
+     MOJO_CONFIG=$SOMEDIR/video_host.conf hypnotoad `which video_host`
+
+=head1 AUTHOR
+
+Justin Hawkins <justin@eatmorecode.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2014 by Justin Hawkins.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut

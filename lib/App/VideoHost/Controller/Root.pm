@@ -1,7 +1,9 @@
 package App::VideoHost::Controller::Root;
 {
-  $App::VideoHost::Controller::Root::VERSION = '0.143303'; # TRIAL
+  $App::VideoHost::Controller::Root::VERSION = '0.143310'; # TRIAL
 }
+
+# ABSTRACT: Controller class for serving videos
 
 use Mojo::Base 'Mojolicious::Controller';
 use Mojolicious::Static;
@@ -54,3 +56,30 @@ sub tracks {
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+App::VideoHost::Controller::Root - Controller class for serving videos
+
+=head1 VERSION
+
+version 0.143310
+
+=head1 AUTHOR
+
+Justin Hawkins <justin@eatmorecode.com>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2014 by Justin Hawkins.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut

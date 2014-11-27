@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "filesystem based personal video hosting",
+  "ABSTRACT" => "Filesystem based personal video hosting",
   "AUTHOR" => "Justin Hawkins <justin\@eatmorecode.com>",
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
@@ -23,10 +23,11 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Carp" => 0,
     "Mojolicious" => "4.63",
-    "Moose" => "2.1005"
+    "Moose" => "2.1005",
+    "Test::Exception" => 0
   },
   "TEST_REQUIRES" => {},
-  "VERSION" => "0.143303",
+  "VERSION" => "0.143310",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -36,7 +37,8 @@ my %WriteMakefileArgs = (
 my %FallbackPrereqs = (
   "Carp" => 0,
   "Mojolicious" => "4.63",
-  "Moose" => "2.1005"
+  "Moose" => "2.1005",
+  "Test::Exception" => 0
 );
 
 
